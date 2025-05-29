@@ -52,9 +52,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'charts/python-app/values.yaml'
           message: 'Update image tag in values.yaml to ${{needs.ci.outputs.commit_image_id}}'
-          push: true
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Install ArgoCD CLI
