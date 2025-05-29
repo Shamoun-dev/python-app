@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: sshamoun/python-app
   pullPolicy: IfNotPresent
-  tag: da62fa
+  tag: b02397
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
