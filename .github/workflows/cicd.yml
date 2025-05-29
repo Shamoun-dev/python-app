@@ -39,6 +39,8 @@ jobs:
     steps:
       - name: Clone repo code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Modify values file of python-app
         shell: bash
@@ -50,7 +52,10 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
+          add: 'charts/python-app/values.yaml'
           message: 'Update image tag in values.yaml to ${{needs.ci.outputs.commit_image_id}}'
+          push: true
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Install ArgoCD CLI
         run: |
