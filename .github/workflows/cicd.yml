@@ -31,6 +31,8 @@ jobs:
         with:
           push: true
           tags: sshamoun/python-app:${{ env.COMMIT_ID }}
+          platforms: linux/amd64,linux/arm64
+          
     outputs:
       commit_image_id: ${{ env.COMMIT_ID }}      
   cd:
