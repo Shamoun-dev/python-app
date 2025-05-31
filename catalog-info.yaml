@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-app
+  description: app displays time.
+  annotations:
+     github.com/project-slug: Shamoun-dev/python-app
+spec:
+  type: service
+  owner: dev
+  lifecycle: experimental
