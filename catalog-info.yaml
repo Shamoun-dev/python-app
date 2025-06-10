@@ -5,6 +5,7 @@ metadata:
   description: app displays time.
   annotations:
      github.com/project-slug: Shamoun-dev/python-app
+     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: dev
